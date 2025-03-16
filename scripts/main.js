@@ -16,14 +16,12 @@ async function renderProducts() {
 
     try {
         const products = await fetchProducts();
-
         
         document.querySelector("header p").textContent = `${products.length} produtos`;
 
         if (products.length === 0) {
             productContainer.innerHTML = `<h2 class="empty-message">Nenhum produto encontrado</h2>`;
         } else {
-            
             const productCards = await Promise.all(products.map(async (product) => {
                 const details = await fetchProductDetails(product.productId);
                 
@@ -32,10 +30,9 @@ async function renderProducts() {
 
             productContainer.innerHTML = "";
             productContainer.append(...productCards);
-
         }
     } catch (error) {
-        console.error("Erro ao renderizar os produtos:", error);
+        console.error("Render products error:", error);
     } finally {
         loadingMessage.style.display = "none"; 
     }
