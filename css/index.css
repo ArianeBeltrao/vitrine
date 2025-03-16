@@ -162,7 +162,6 @@ button img{
 .grid-2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    background-color: aquamarine;
 }
   
 .grid-5 {
