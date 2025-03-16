@@ -15,11 +15,9 @@ export function createProductCard(product, details) {
     if (details) {
         const firstItem = details[0]?.items?.[0];
         const images = firstItem?.images?.map(img => img.imageUrl) || ["./assets/img-not-found.jpg"];
-
         
         newCard.querySelector(".product-image").src = images[0];
 
-        
         const thumbnailContainer = newCard.querySelector(".thumbnail-container");
         thumbnailContainer.innerHTML = ""; 
 
@@ -30,7 +28,6 @@ export function createProductCard(product, details) {
             thumbnail.onclick = () => newCard.querySelector(".product-image").src = imageUrl;
             thumbnailContainer.appendChild(thumbnail);
         });
-
 
         const firstPriceWithoutDiscount = firstItem?.sellers?.[0]?.commertialOffer?.PriceWithoutDiscount?.toFixed(2) || "N/A";
 
@@ -54,7 +51,7 @@ export function setupGridToggle() {
     document.getElementById('toggle-btn-desktop').addEventListener('click', function() {
         const container = document.querySelector('.container');
         const toggleImgDesktop = document.getElementById('toggle-img-desktop');
-    ;
+
         if (container.classList.contains("grid-5")) {
             container.classList.remove("grid-5");
             toggleImgDesktop.src = "/assets/five-cards.png";
@@ -67,7 +64,7 @@ export function setupGridToggle() {
     document.getElementById('toggle-btn-mobile').addEventListener('click', function() {
         const container = document.querySelector('.container');
         const toggleImgMobile = document.getElementById('toggle-img-mobile');
-    ;
+        
         if (container.classList.contains("grid-2")) {
             container.classList.remove("grid-2");
             toggleImgMobile.src = "/assets/two-cards.png";
