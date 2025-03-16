@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vitrine</title>
+    <link rel="stylesheet" href="./css/vitrine.css" />
+  </head>
+  <body>
+    <header>
+      <p>Carregando...</p>
+
+      <button class="toggle-btn-mobile" id="toggle-btn-mobile">
+        <img
+          id="toggle-img-mobile"
+          src="/assets/two-cards.png"
+          alt="Botão para mostrar 2 produtos por linha"
+        />
+      </button>
+      <button class="toggle-btn-desktop" id="toggle-btn-desktop">
+        <img
+          id="toggle-img-desktop"
+          src="/assets/five-cards.png"
+          alt="Botão para mostrar 5 produtos por linha"
+        />
+      </button>
+    </header>
+
+    <h2 class="loading-message">Carregando produtos...</h2>
+
+    <section class="container">
+      <div class="card template" style="display: none">
+        <div class="image-container">
+          <img class="product-image" src="" alt="Imagem do produto" />
+          <p class="product-name"></p>
+          <div class="thumbnail-container"></div>
+        </div>
+
+        <p class="product-price-without-discount"></p>
+        <h2 class="product-price"></h2>
+
+        <button class="button">COMPRAR</button>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
