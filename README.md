@@ -29,8 +29,3 @@ Funcionalidades
   Botão de compra (sem necessidade de ação ao clicar).
 
   Interatividade: ao clicar em uma miniatura de variação, a imagem principal do produto deve ser trocada por ela.
-
-![alt text](image-4.png)
-![alt text](image-5.png)
-![alt text](image-2.png)
-![alt text](image-3.png)
